@@ -1,0 +1,331 @@
+/* !        Global Styles        */
+body {
+  background-color: var(--secondaryColor);
+
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+:root {
+  --mainColor: #604652;
+  --secondaryColor: #d29f80;
+}
+
+/* ?? ****************************************************************** ?? */
+
+/*!        Loading-Screen Style      */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffffd2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.loader {
+  width: 40px;
+  height: 98px;
+  display: inline-block;
+  position: relative;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  color: rgba(255, 61, 0, 0.9);
+  border-radius: 20px 20px 4px 4px;
+  background: #fff;
+  animation: fill 2s linear infinite alternate;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -95%);
+  border: 2px solid #fff;
+  border-bottom: none;
+  background: #fff;
+  width: 15px;
+  height: 35px;
+  animation: fillNeck 2s linear infinite alternate;
+}
+
+@keyframes fill {
+  0% {
+    box-shadow: 0 0 inset;
+  }
+  50%,
+  100% {
+    box-shadow: 0 -98px inset;
+  }
+}
+
+@keyframes fillNeck {
+  0%,
+  50% {
+    box-shadow: 0 0 inset;
+  }
+  100% {
+    box-shadow: 0 -20px inset;
+  }
+}
+
+/* !        Side Navbar         */
+.sideNav {
+  background-color: var(--secondaryColor);
+}
+
+.taps a {
+  text-decoration: none;
+  color: var(--mainColor);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.icons {
+  font-size: 1.25rem;
+  color: var(--mainColor);
+}
+
+.gear-icon {
+  background-color: #735557;
+  color: var(--secondaryColor);
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.3125rem;
+}
+
+.share {
+  font-size: 1.25rem;
+}
+
+#sideNav a i {
+  transition: transform 0.3s ease;
+}
+
+#sideNav a:hover i {
+  transform: scale(1.3);
+}
+
+#sideNav {
+  overflow-y: auto;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.home{
+  color: var(--secondaryColor);
+  font-size: 1.875rem;
+}
+
+/* !        Body Content         */
+.meal-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: bottom 0.7s ease;
+}
+
+.meal-card:hover .meal-overlay {
+  bottom: 0;
+}
+
+.category-card:hover .meal-overlay {
+  bottom: 0;
+}
+
+.meal-name {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.category-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.category-card h5{
+  color: var(--secondaryColor);
+}
+
+/* !        Search Page         */
+.search-input {
+  height: 55px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 2px 8px var(--mainColor);
+}
+
+.search-icon {
+  left: 1.5625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mainColor);
+  font-size: 1.2rem;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--mainColor);
+  border: 2px solid var(--mainColor);
+}
+
+/* !        Area Page         */
+.bg-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.area-icon {
+  animation: floatIn 0.5s ease-out;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.area-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* !        Ingrediants Page         */
+#ingredientsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.ingredient-card {
+  position: relative;
+  flex: 1 1 200px;
+  max-height: 250px;
+  background-color: var(--secondaryColor);
+  color: white;
+  border-radius: 15px;
+  padding: 25px 20px 35px 20px;
+  box-shadow: 0 8px 15px #735557;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: .3125rem;
+}
+
+.ingredient-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px #735557;
+}
+
+.ingredient-card i {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.ingredient-card h5 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.ingredient-card p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  height: 50px;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+/* عند المرور تظهر وصف كامل */
+.ingredient-card:hover p {
+  opacity: 1;
+  height: auto;
+}
+
+/* Fade-in + slide-up animation عند التحميل */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.ingredient-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* !        Contact US Page         */
+#contactSection {
+  background: linear-gradient(270deg, #97866A22, #D29F8022, #60465222, #73555722);
+  background-size: 800% 800%;
+  animation: gradientShift 20s ease infinite;
+  border-radius: 20px;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.is-valid {
+  border-color: #28a745;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+.text-danger {
+  color: #dc3545;
+  font-size: 0.9em;
+}
+
+.submitButton{
+  background-color: var(--secondaryColor);
+  color: white;
+  font-weight: bold;
+}
+
