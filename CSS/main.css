@@ -78,18 +78,6 @@ html {
   }
 }
 
-/* !        Humburger Button         */
-@media (max-width: 768px) {
-  .sideNav {
-    left: -250px !important;
-    transition: left 0.3s;
-  }
-
-  .sideNav.active {
-    left: 0 !important;
-  }
-}
-
 /* !        Side Navbar         */
 .sideNav {
   background-color: var(--secondaryColor);

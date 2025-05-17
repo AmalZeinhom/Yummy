@@ -474,16 +474,3 @@ $("#homeBtn").on("click", function(e){
   }
 });
 
-/* !        Humburger Button         */
-
-$(document).ready(function () {
-  $("#openNavBtn").click(function () {
-    $(".sideNav").addClass("active");
-  });
-
-  // ممكن تستخدمي أي عنصر لإغلاق الـ sideNav
-  $(".toggle-icon").click(function () {
-    $(".sideNav").removeClass("active");
-  });
-});
-
