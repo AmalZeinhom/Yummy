@@ -90,7 +90,7 @@ function showMealDetails(meal) {
 
   let html = `
     <div class="col-md-4">
-      <img src="${meal.strMealThumb}" class="w-100 rounded-3 mb-3">
+      <img src="${meal.strMealThumb}" class="w-100 rounded-4 detailedImg mb-3">
       <h2>${meal.strMeal}</h2>
     </div>
     <div class="col-md-8">
@@ -334,7 +334,7 @@ function displayIngredients(ingredients) {
   ingredients.forEach((ingredient) => {
     cartoona += `
       <div class="col-md-3 text-center">
-        <div class="card ingredient-card p-4 rounded-4 bg-transparent border-0" data-ingredient="${
+        <div class="card ingredient-card p-4 m-4 rounded-4 bg-transparent border-0" data-ingredient="${
           ingredient.strIngredient
         }" style="cursor: pointer;">
           <i class="fa-solid fa-bowl-food fa-3x mb-3"></i>

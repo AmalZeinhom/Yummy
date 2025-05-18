@@ -143,13 +143,24 @@ html {
   transform: scale(1.03);
 }
 
-.meal-card{
+.meal-card {
+  animation: slideIn 3s ease forwards;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
 }
 
-.meal-card:hover{
-  transform: scale(1.08);
+/* .meal-card:hover {
+  transform: scale(1.07);
+} */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .category-card:hover .meal-overlay {
@@ -164,7 +175,21 @@ html {
 .category-card {
   position: relative;
   cursor: pointer;
+    animation: zoomIn 2s ease forwards;
+
 }
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 
 .category-card h5{
   color: var(--secondaryColor);
@@ -334,7 +359,7 @@ html {
 }
 
 .submitButton{
-  background-color: var(--secondaryColor);
+  background-color: var(--mainColor);
   color: white;
   font-weight: bold;
 }
@@ -343,6 +368,11 @@ html {
   color: var(--mainColor);
 }
 
+/* ! Meal Details */
+.detailedImg{
+  transition: transform 0.3s ease-in-out;
+}
 
-
-
+.detailedImg:hover{
+    transform: scale(1.05);
+}
