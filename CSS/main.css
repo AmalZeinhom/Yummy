@@ -140,6 +140,16 @@ html {
 
 .meal-card:hover .meal-overlay {
   bottom: 0;
+  transform: scale(1.03);
+}
+
+.meal-card{
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.meal-card:hover{
+  transform: scale(1.08);
 }
 
 .category-card:hover .meal-overlay {
@@ -191,8 +201,17 @@ html {
   transition: box-shadow 0.3s ease;
 }
 
+.area-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.area-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .area-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .area-icon {
@@ -208,15 +227,6 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.area-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.area-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* !        Ingrediants Page         */
@@ -328,4 +338,11 @@ html {
   color: white;
   font-weight: bold;
 }
+
+.title{
+  color: var(--mainColor);
+}
+
+
+
 
