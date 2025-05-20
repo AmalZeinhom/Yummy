@@ -148,10 +148,6 @@ html {
   cursor: pointer;
 }
 
-/* .meal-card:hover {
-  transform: scale(1.07);
-} */
-
 @keyframes slideIn {
   from {
     transform: translateX(-100%);
